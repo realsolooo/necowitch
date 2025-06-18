@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class of '09 — Necowitch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Space Mono', monospace;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, rgba(255,0,255,0.05), rgba(0,255,255,0.05));
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 20px;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.2em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff00aa, 0 0 20px #00ffee;
+      animation: glitch 1.5s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 #ff00aa, -2px 0 #00ffee; }
+      25% { text-shadow: -2px 0 #00ffee, 2px 0 #ff00aa; }
+      50% { text-shadow: 2px 0 #ff00aa, -2px 0 #00ffee; }
+      75% { text-shadow: -2px 0 #00ffee, 2px 0 #ff00aa; }
+      100% { text-shadow: 2px 0 #ff00aa, -2px 0 #00ffee; }
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #ff00aa;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 2px solid #00ffee;
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px #00ffee20;
+    }
+
+    .section h2 {
+      color: #ff00aa;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    .socials {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .socials a {
+      color: #00ffee;
+      text-decoration: none;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ff00aa;
+      text-shadow: 0 0 6px #ff00aa;
+    }
+
+    iframe {
+      width: 100%;
+      height: 152px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 0 15px #ff00aa30;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .section {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="overlay"></div>
+
+<header>
+  <img src="https://yt3.googleusercontent.com/bWZWB2bRttHWWmOJZn2t6CCDgIlCfdeI6SVHJ66S9gTyjgKRfEmGJtGZGZtd3kK7nEVyvAjoxA=s160-c-k-c0x00ffffff-no-rj" alt="Profile" class="profile-img">
+  <h1>necowitch</h1>
+</header>
+
+
+<section class="section">
+    <div class="socials">
+      <p>socials -->   </p>
+    <a href="https://discord.gg/crowz" target="_blank">MurderCrowz</a>
+    <a href="https://www.youtube.com/channel/UCYSTKVeO0FNB2ORaCLNefkQ" target="_blank">YouTube</a>
+  </div>
+</section>
+
+<section class="section">
+  <p>go stream my music:</p>
+  <iframe src="https://open.spotify.com/embed/track/6AaPg80Ecl2oNMJ96VKUyt" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</section>
+
+<audio autoplay loop>
+  <source src="bg.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 168 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 4, random: true },
+      move: { enable: true, speed: 1.2, random: true }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { quantity: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+</body>
+</html>
